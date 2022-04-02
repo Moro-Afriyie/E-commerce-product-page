@@ -4,3 +4,5 @@ import { testReducer } from "./testReducer";
 export const rootReducer = combineReducers({
   test: testReducer,
 });
+
+export type IRootReducerState = ReturnType<typeof rootReducer>;
