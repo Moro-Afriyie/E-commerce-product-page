@@ -14,7 +14,7 @@ export const testReducer = (state = initialState, action: IAction) => {
     case TEST_ACTION:
       return {
         ...state,
-        test: action.payload,
+        testValue: action.payload,
       };
     default:
       return state;

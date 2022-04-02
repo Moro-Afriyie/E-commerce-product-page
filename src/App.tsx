@@ -17,7 +17,7 @@ function App() {
         {testValue}
       </h3>
       <button
-        className="bg-red-500 px-8 py-4 border border-red-900 shadow-lg rounded-md"
+        className="bg-red-500 px-4 py-2 border border-red-900 shadow-lg rounded-md"
         onClick={() => dispatch(changeTestValue("welcome to my page"))}
       >
         change value
