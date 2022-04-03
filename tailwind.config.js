@@ -10,10 +10,13 @@ module.exports = {
         grayishBlue: "hsl(220, 14%, 75%)",
         lightGrayishBlue: "hsl(223, 64%, 98%)",
         white: "hsl(0, 0%, 100%)",
-        lightBoxBackrground: "hsl(0, 0%, 0%)",
+        lightBoxBackground: "hsl(0, 0%, 0%)",
       },
       fontFamily: {
         KumbhSans: "'Kumbh Sans', sans-serif",
+      },
+      maxWidth: {
+        main: "calc(100vw - 20rem)",
       },
     },
   },
