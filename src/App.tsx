@@ -11,7 +11,7 @@ function App() {
         <NavBar />
         <div className="px-16 py-10 flex justify-between">
           <Carousel />
-          <div className="product-details  border max-w-[32rem] pr-6 w-full border-red-900 flex flex-col justify-center gap-4">
+          <div className="product-details   max-w-[32rem] pr-6 w-full  flex flex-col justify-center gap-4">
             <h3 className="uppercase text-darkOrange font-bold tracking-widest">
               sneaker company
             </h3>
@@ -37,10 +37,10 @@ function App() {
               </p>
             </div>
             <div
-              className="control-buttons w-full flex gap-4 mt-4
+              className="control-buttons w-full flex gap-4 mt-4 pr-10
             "
             >
-              <div className="flex justify-between items-center rounded-md px-4 w-28 bg-lightGrayishBlue">
+              <div className="flex justify-between items-center rounded-md px-2 w-28 bg-lightGrayishBlue">
                 <span className="material-icons-outlined text-sm text-darkOrange font-bold">
                   remove
                 </span>
@@ -49,7 +49,7 @@ function App() {
                   add
                 </span>
               </div>
-              <button className="flex-grow rounded-md shadow-xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-2 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
+              <button className="flex-grow rounded-md shadow-xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
                 <span className="material-icons-outlined text-sm">
                   shopping_cart
                 </span>

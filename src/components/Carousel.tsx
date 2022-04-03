@@ -101,7 +101,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
       <div className="controls max-w-[25rem] flex justify-evenly gap-6  h-20">
         {images.map((img, i) => (
           <div
-            className={`w-full rounded-lg  cursor-pointer overflow-hidden ${
+            className={`w-full rounded-lg  cursor-pointer overflow-hidden hover:opacity-60 ${
               i === currentImage ? "border-2 border-darkOrange " : ""
             }`}
             key={img}
