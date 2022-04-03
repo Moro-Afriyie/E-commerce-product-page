@@ -15,7 +15,7 @@ function App() {
             <h3 className="uppercase text-darkOrange font-bold tracking-widest">
               sneaker company
             </h3>
-            <p className="capitalize text-black font-bold text-5xl mb-4">
+            <p className="capitalize text-darkBlue font-bold text-5xl mb-4">
               Fall limited edition sneakers
             </p>
             <p className="text-darkGrayishBlue ">
@@ -23,16 +23,39 @@ function App() {
               Featuring a durable rubber against outer sole, they&apos;ll
               withstand everything the weather can offer.
             </p>
-            <div className="flex gap-3 items-center">
-              <p className="text-black font-bold text-xl">$125.00</p>
-              <div className="px-2 py-[0.1rem] bg-paleOrange rounded-md">
-                <p className="text-[0.6rem] font-bold text-darkOrange font-KumbhSans">
-                  50%
-                </p>
+            <div>
+              <div className="flex gap-3 items-center">
+                <p className="text-black font-bold text-xl">$125.00</p>
+                <div className="px-2 py-[0.1rem] bg-paleOrange rounded-md">
+                  <p className="text-[0.6rem] font-bold text-darkOrange font-KumbhSans">
+                    50%
+                  </p>
+                </div>
               </div>
+              <p className="text-sm text-grayishBlue font-bold line-through">
+                $250.00
+              </p>
             </div>
-            <p>$250.00</p>
-            <div className="control-buttons">buttons</div>
+            <div
+              className="control-buttons w-full flex gap-4 mt-4
+            "
+            >
+              <div className="flex justify-between items-center rounded-md px-4 w-28 bg-lightGrayishBlue">
+                <span className="material-icons-outlined text-sm text-darkOrange font-bold">
+                  remove
+                </span>
+                <p className="text-darkBlue font-bold">0</p>
+                <span className="material-icons-outlined text-sm text-darkOrange font-bold">
+                  add
+                </span>
+              </div>
+              <button className="flex-grow rounded-md shadow-xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-2 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
+                <span className="material-icons-outlined text-sm">
+                  shopping_cart
+                </span>
+                <p>Add to cart</p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
