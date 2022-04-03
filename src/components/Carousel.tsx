@@ -10,7 +10,6 @@ const images = [
 ];
 
 const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
-  // We will start by storing the index of the current image in the state.
   const [currentImage, setCurrentImage] = React.useState(0);
 
   // We are using react ref to 'tag' each of the images. Below will create an array of
@@ -86,7 +85,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // Finally the image itself will be 100% of a parent div. Outer div is
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
-    <div className="p-12 flex justify-center w-screen md:w-1/2 items-center border-2 border-red-900">
+    <div className="flex items-center border-2 border-red-900">
       <div className="relative w-full">
         <div className="carousel">
           {sliderControl(true)}
