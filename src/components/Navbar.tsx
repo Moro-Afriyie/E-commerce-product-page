@@ -1,6 +1,5 @@
 import * as React from "react";
 import logo from "../assets/logo.svg";
-import cartIcon from "../assets/icon-cart.svg";
 import avatar from "../assets/image-avatar.png";
 
 const NavBar: React.FunctionComponent = () => {
@@ -37,8 +36,11 @@ const NavBar: React.FunctionComponent = () => {
         {/**cart icon and avatar */}
         <div className="flex gap-8 items-center">
           <div className="relative cursor-pointer">
-            <img src={cartIcon} alt="cart" className="h-4" />
-            <div className="w-4 flex items-center justify-center absolute -top-[0.4rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
+            {/* <img src={cartIcon} alt="cart" className="h-4" /> */}
+            <span className="material-icons-outlined text-darkGrayishBlue hover:text-darkBlue">
+              shopping_cart
+            </span>
+            <div className="w-4 flex items-center justify-center absolute -top-[0.3rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
               <p>3</p>
             </div>
           </div>
