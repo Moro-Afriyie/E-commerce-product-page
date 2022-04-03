@@ -17,8 +17,7 @@ function App() {
       <div className="flex flex-col gap-5  max-w-6xl mx-auto h-full w-full">
         {/**Nav Bar */}
         <NavBar />
-        <div className="px-10">
-          <h1>product page</h1>
+        <div className="px-10 py-10 flex justify-between">
           <Carousel />
         </div>
       </div>
