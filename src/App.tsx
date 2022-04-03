@@ -13,7 +13,7 @@ function App() {
 
   return (
     <main className="min-h-screen font-KumbhSans">
-      <div className="border border-darkOrange  max-w-main mx-auto h-full w-full">
+      <div className="border border-darkOrange  max-w-6xl mx-auto h-full w-full">
         {/**Nav Bar */}
         <NavBar />
         <h1 className="text-3xl font-bold underline">Hello world!</h1>

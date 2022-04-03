@@ -5,9 +5,9 @@ import avatar from "../assets/image-avatar.png";
 
 const NavBar: React.FunctionComponent = () => {
   return (
-    <header className="h-16 border-b-2 border-lightGrayishBlue">
+    <header className="h-20 border-b-2 border-lightGrayishBlue">
       <nav className="h-full flex justify-between">
-        <div className="flex pt-5  gap-12 h-full">
+        <div className="flex pt-6  gap-12 h-full">
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
@@ -36,7 +36,7 @@ const NavBar: React.FunctionComponent = () => {
         </div>
         {/**cart icon and avatar */}
         <div className="flex gap-8 items-center">
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <img src={cartIcon} alt="cart" className="h-4" />
             <div className="w-4 flex items-center justify-center absolute -top-[0.4rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
               <p>3</p>
