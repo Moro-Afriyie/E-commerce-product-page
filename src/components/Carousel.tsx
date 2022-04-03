@@ -7,6 +7,7 @@ const images = [
   "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
   "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
   "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1549740425-5e9ed4d8cd34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
 ];
 
 const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
@@ -19,8 +20,6 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     acc[i] = React.createRef();
     return acc;
   }, {});
-
-  console.log(refs);
 
   const scrollToImage = (i: number) => {
     // First let's set the index of the image we want to see next
@@ -85,17 +84,32 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // Finally the image itself will be 100% of a parent div. Outer div is
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
-    <div className="flex items-center border-2 border-red-900">
-      <div className="relative w-full">
-        <div className="carousel">
-          {sliderControl(true)}
-          {images.map((img, i) => (
-            <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
-              <img src={img} className="w-full object-contain" />
-            </div>
-          ))}
-          {sliderControl(false)}
+    <div className="flex flex-col gap-5">
+      <div className="flex max-w-[26rem] w-full h-[31rem] rounded-xl overflow-hidden items-center border-2 border-red-900">
+        <div className="relative h-full w-full">
+          <div className="carousel">
+            {sliderControl(true)}
+            {images.map((img, i) => (
+              <div className="w-full  flex-shrink-0" key={img} ref={refs[i]}>
+                <img src={img} className="w-full h-full object-cover" />
+              </div>
+            ))}
+            {sliderControl(false)}
+          </div>
         </div>
+      </div>
+      <div className="controls max-w-[26rem] flex justify-evenly gap-6  h-20">
+        {images.map((img, i) => (
+          <div
+            className={`w-full rounded-lg cursor-pointer overflow-hidden ${
+              i === currentImage ? "border-2 border-darkOrange" : ""
+            }`}
+            key={img}
+            onClick={() => scrollToImage(i)}
+          >
+            <img src={img} className="w-full h-full object-cover" />
+          </div>
+        ))}
       </div>
     </div>
   );
