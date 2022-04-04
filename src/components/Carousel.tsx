@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
+import { IRootReducerState } from "../store/reducers/rootReducer";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ICarouselProps {}
@@ -12,6 +14,9 @@ const images = [
 
 const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
   const [currentImage, setCurrentImage] = React.useState(0);
+  const isModalOpen = useSelector(
+    (state: IRootReducerState) => state.modal.isOpen
+  );
 
   // We are using react ref to 'tag' each of the images. Below will create an array of
   // objects with numbered keys. We will use those numbers (i) later to access a ref of a
@@ -86,7 +91,11 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // absolute positioning on each side of the image.
     <div className="flex flex-col gap-5 items-center">
       {/**h-[27rem] */}
-      <div className="flex  w-full h-[25rem] rounded-xl overflow-hidden items-center">
+      <div
+        className={`flex  w-full ${
+          isModalOpen ? "h-[30rem]" : "h-[25rem]"
+        } rounded-xl overflow-hidden items-center`}
+      >
         <div className="relative h-full w-full">
           <div className="carousel">
             {sliderControl(true)}

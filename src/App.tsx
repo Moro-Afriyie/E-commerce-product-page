@@ -23,7 +23,7 @@ function App() {
           <ProductDetails />
         </div>
       </div>
-      <Modal />
+      {isModalOpen && <Modal />}
     </main>
   );
 }
