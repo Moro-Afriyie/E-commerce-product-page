@@ -85,7 +85,8 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
     <div className="flex flex-col gap-5 items-center">
-      <div className="flex  w-full h-[27rem] rounded-xl overflow-hidden items-center">
+      {/**h-[27rem] */}
+      <div className="flex  w-full h-[25rem] rounded-xl overflow-hidden items-center">
         <div className="relative h-full w-full">
           <div className="carousel">
             {sliderControl(true)}
