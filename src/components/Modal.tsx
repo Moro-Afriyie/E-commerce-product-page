@@ -10,8 +10,10 @@ const Modal: React.FunctionComponent<IModalProps> = (props) => {
       className="fixed inset-0 bg-black bg-opacity-80 overflow-y-auto  z-50 flex items-center justify-center h-full w-full"
       id="my-modal"
     >
-      <div className="flex flex-col max-w-[30rem]">
-        <span className="material-icons-outlined ml-auto">close</span>
+      <div className="flex flex-col max-w-[30rem] items-center gap-4">
+        <span className="material-icons-outlined ml-auto text-white">
+          close
+        </span>
         <Carousel />
       </div>
     </div>
