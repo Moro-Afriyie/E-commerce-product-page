@@ -92,9 +92,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     <div className="flex flex-col gap-5 items-center">
       {/**h-[27rem] */}
       <div
-        className={`flex  w-full ${
-          isModalOpen ? "h-[30rem]" : "h-[25rem]"
-        } rounded-xl overflow-hidden items-center`}
+        className={`flex  w-full h-[25rem] rounded-xl overflow-hidden items-center`}
       >
         <div className="relative h-full w-full">
           <div className="carousel">
