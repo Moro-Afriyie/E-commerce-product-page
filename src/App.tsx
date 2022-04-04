@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Carousel from "./components/Carousel";
+import Modal from "./components/Modal";
 import NavBar from "./components/Navbar";
 import ProductDetails from "./components/ProductDetails";
 
@@ -15,6 +16,7 @@ function App() {
           <ProductDetails />
         </div>
       </div>
+      <Modal />
     </main>
   );
 }
