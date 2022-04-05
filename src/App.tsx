@@ -17,7 +17,7 @@ function App() {
         {/**Nav Bar */}
         <NavBar />
         <div className="md:px-16 md:py-10 flex flex-col md:flex-row md:justify-between">
-          <div className="w-full max-w-[25rem]">
+          <div className="w-full md:max-w-[25rem]">
             <Carousel />
           </div>
           <ProductDetails />

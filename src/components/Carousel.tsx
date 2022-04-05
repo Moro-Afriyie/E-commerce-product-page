@@ -94,7 +94,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // Finally the image itself will be 100% of a parent div. Outer div is
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
-    <div className="flex flex-col gap-5 items-center">
+    <div className="md:flex flex-col gap-5 items-center">
       {/**h-[27rem] */}
       <div
         className={`flex  w-full h-[25rem] md:rounded-xl md:overflow-hidden items-center`}
