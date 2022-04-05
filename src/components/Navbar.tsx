@@ -1,16 +1,20 @@
 import * as React from "react";
 import logo from "../assets/logo.svg";
 import avatar from "../assets/image-avatar.png";
+import menuIcon from "../assets/icon-menu.svg";
 
 const NavBar: React.FunctionComponent = () => {
   return (
-    <header className="h-20 border-b-2 border-lightGrayishBlue">
+    <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue">
       <nav className="h-full flex justify-between">
-        <div className="flex pt-6  gap-12 h-full">
+        <div className="flex items-center md:pt-6  md:gap-12 h-full">
+          <button className="mr-4">
+            <img src={menuIcon} alt="menu icon" />
+          </button>
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          <ul className="flex gap-8 h-full">
+          <ul className="hidden md:flex md:gap-8 md:h-full">
             <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground group">
               <p>Collections</p>
               <div className="hidden group-hover:block h-1 w-full  bg-darkOrange mt-auto"></div>
@@ -34,9 +38,8 @@ const NavBar: React.FunctionComponent = () => {
           </ul>
         </div>
         {/**cart icon and avatar */}
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-5 md:gap-8 items-center">
           <div className="relative cursor-pointer">
-            {/* <img src={cartIcon} alt="cart" className="h-4" /> */}
             <span className="material-icons-outlined text-darkGrayishBlue hover:text-darkBlue">
               shopping_cart
             </span>
@@ -44,7 +47,7 @@ const NavBar: React.FunctionComponent = () => {
               <p>3</p>
             </div>
           </div>
-          <div className="w-10 h-10 border-2 rounded-full hover:border-darkOrange cursor-pointer">
+          <div className="w-7 h-7 md:w-10 md:h-10 border-2 rounded-full hover:border-darkOrange cursor-pointer">
             <img src={avatar} alt="avatar" />
           </div>
         </div>
