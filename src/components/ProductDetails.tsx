@@ -54,7 +54,7 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
             </span>
           </button>
         </div>
-        <button className="flex-grow rounded-md shadow-xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
+        <button className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
           <span className="material-icons-outlined text-sm">shopping_cart</span>
           <p>Add to cart</p>
         </button>
