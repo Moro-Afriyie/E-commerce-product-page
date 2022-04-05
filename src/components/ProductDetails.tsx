@@ -7,11 +7,11 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
   const [cartNumber, setCartNumber] = React.useState(0);
 
   return (
-    <div className="product-details px-4 pt-6 md:px-0 max-w-[32rem] md:pr-6 w-full  flex flex-col mx-auto md:mx-0 justify-center gap-4">
+    <div className="product-details px-4 pt-6 md:px-0 max-w-[32rem] lg:pr-6 w-full  flex flex-col mx-auto md:mx-0 justify-center gap-4">
       <h3 className="uppercase text-darkOrange font-bold tracking-widest">
         sneaker company
       </h3>
-      <p className="capitalize text-darkBlue font-bold text-4xl md:text-5xl md:mb-4">
+      <p className="capitalize text-darkBlue font-bold text-4xl lg:text-5xl md:mb-4">
         Fall limited edition sneakers
       </p>
       <p className="text-darkGrayishBlue ">
@@ -33,7 +33,7 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
         </p>
       </div>
       <div
-        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 md:pr-10 mb-11
+        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 lg:pr-10 mb-11
             "
       >
         <div className="flex justify-between items-center rounded-md py-3 px-2 w-full md:w-28 bg-lightGrayishBlue">
