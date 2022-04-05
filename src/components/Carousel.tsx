@@ -66,7 +66,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
 
   // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
   const arrowStyle =
-    "absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center";
+    "md:hidden absolute text-black text-2xl z-10 bg-white h-10 w-10 rounded-full  flex items-center justify-center";
 
   // Let's create dynamic buttons. It can be either left or right. Using
   // isLeft boolean we can determine which side we'll be rendering our button
@@ -76,11 +76,16 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
       type="button"
       onClick={isLeft ? previousImage : nextImage}
       className={`${arrowStyle} ${isLeft ? "left-2" : "right-2"}`}
-      style={{ top: "40%" }}
+      style={{ top: "45%" }}
     >
-      <span role="img" aria-label={`Arrow ${isLeft ? "left" : "right"}`}>
+      {/* <span role="img" aria-label={`Arrow ${isLeft ? "left" : "right"}`}>
         {isLeft ? "◀" : "▶"}
-      </span>
+      </span> */}
+      {isLeft ? (
+        <span className="material-icons-outlined">chevron_left</span>
+      ) : (
+        <span className="material-icons-outlined">chevron_right</span>
+      )}
     </button>
   );
   return (
@@ -92,7 +97,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     <div className="flex flex-col gap-5 items-center">
       {/**h-[27rem] */}
       <div
-        className={`flex  w-full h-[25rem] rounded-xl overflow-hidden items-center`}
+        className={`flex  w-full h-[25rem] md:rounded-xl md:overflow-hidden items-center`}
       >
         <div className="relative h-full w-full">
           <div className="carousel">
@@ -107,7 +112,7 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
         </div>
       </div>
       {/**max-w[25rem] h-20 */}
-      <div className="controls max-w-[25rem] flex justify-center gap-6  h-20">
+      <div className="hidden controls max-w-[25rem] md:flex justify-center gap-6  h-20">
         {images.map((img, i) => (
           <div
             className={`w-full rounded-lg  cursor-pointer overflow-hidden hover:opacity-60 ${

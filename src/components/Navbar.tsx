@@ -6,9 +6,9 @@ import menuIcon from "../assets/icon-menu.svg";
 const NavBar: React.FunctionComponent = () => {
   return (
     <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue">
-      <nav className="h-full flex justify-between">
-        <div className="flex items-center md:pt-6  md:gap-12 h-full">
-          <button className="mr-4">
+      <nav className="h-full flex items-center justify-between">
+        <div className="flex items-center md:items-start md:pt-6  md:gap-12 h-full">
+          <button className="mr-4 md:hidden">
             <img src={menuIcon} alt="menu icon" />
           </button>
           <div className="logo">
