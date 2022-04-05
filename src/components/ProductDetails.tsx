@@ -6,6 +6,8 @@ interface IProductDetailsProps {}
 const ProductDetails: React.FunctionComponent<IProductDetailsProps> = (
   props
 ) => {
+  const [cartNumber, setCartNumber] = React.useState(0);
+
   return (
     <div className="product-details max-w-[32rem] pr-6 w-full  flex flex-col justify-center gap-4">
       <h3 className="uppercase text-darkOrange font-bold tracking-widest">
@@ -37,13 +39,22 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = (
             "
       >
         <div className="flex justify-between items-center rounded-md px-2 w-28 bg-lightGrayishBlue">
-          <span className="material-icons-outlined text-sm text-darkOrange cursor-pointer font-bold">
-            remove
-          </span>
-          <p className="text-darkBlue font-bold">0</p>
-          <span className="material-icons-outlined cursor-pointer text-sm text-darkOrange font-bold">
-            add
-          </span>
+          <button>
+            <span
+              className="material-icons-outlined text-sm text-darkOrange cursor-pointer font-bold"
+              onClick={() =>
+                setCartNumber((prev: number) => (prev <= 0 ? 0 : prev - 1))
+              }
+            >
+              remove
+            </span>
+          </button>
+          <p className="text-darkBlue font-bold">{cartNumber}</p>
+          <button onClick={() => setCartNumber((prev: number) => prev + 1)}>
+            <span className="material-icons-outlined cursor-pointer text-sm text-darkOrange font-bold">
+              add
+            </span>
+          </button>
         </div>
         <button className="flex-grow rounded-md shadow-xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
           <span className="material-icons-outlined text-sm">shopping_cart</span>
