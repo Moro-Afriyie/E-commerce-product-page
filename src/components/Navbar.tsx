@@ -46,7 +46,9 @@ const NavBar: React.FunctionComponent = () => {
             <div className="w-4 flex items-center justify-center absolute -top-[0.3rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
               <p>3</p>
             </div>
+            {/* <div className="border border-red-900 absolute z-20 w-80 h-80 left-10 right-0 bg-white"></div> */}
           </div>
+
           <div className="w-7 h-7 md:w-10 md:h-10 border-2 rounded-full hover:border-darkOrange cursor-pointer">
             <img src={avatar} alt="avatar" />
           </div>
