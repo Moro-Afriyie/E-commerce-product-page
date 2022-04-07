@@ -2,7 +2,6 @@ import * as React from "react";
 import logo from "../assets/logo.svg";
 import avatar from "../assets/image-avatar.png";
 import menuIcon from "../assets/icon-menu.svg";
-import deleteIcon from "../assets/icon-delete.svg";
 import CheckoutItem from "./CheckoutItem";
 
 const NavBar: React.FunctionComponent = () => {
@@ -49,17 +48,19 @@ const NavBar: React.FunctionComponent = () => {
               <p>3</p>
             </div>
             <div className=" absolute -right-16 top-[3.5rem] px-2 sm:px-0 w-screen sm:w-80 xl:w-[22.5rem] sm:mr-4 md:mr-0  z-20 sm:top-10 sm:-right-[4.3rem] xl:-right-[6rem]">
-              <div className=" bg-white rounded-lg shadow-2xl flex flex-col w-full h-full min-h-[20rem] sm:min-h-[13.5rem]">
+              <div className=" bg-white rounded-lg shadow-2xl flex flex-col w-full h-full min-h-[13.5rem]">
                 <div>
                   <p className="p-4 font-bold text-darkBlue">Cart</p>
                   <hr className="" />
                 </div>
                 <div className="flex-grow">
-                  {/* <p className="font-bold text-darkGrayishBlue w-full text-center">
-                    Your cart is empty.
-                  </p> */}
+                  <div className="flex-grow flex justify-center items-center">
+                    <p className="font-bold text-darkGrayishBlue">
+                      Your cart is empty.
+                    </p>
+                  </div>
 
-                  <div className="flex flex-col gap-5 px-4 py-4 ">
+                  {/* <div className="flex flex-col gap-5 px-4 py-4 ">
                     <CheckoutItem
                       productName={"Fall Limited Edition Sneakers"}
                       productPrice={125}
@@ -72,7 +73,7 @@ const NavBar: React.FunctionComponent = () => {
                     <button className="w-full px-4 py-3 text-sm text-white bg-darkOrange rounded-md">
                       Checkout
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

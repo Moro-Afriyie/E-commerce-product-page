@@ -78,9 +78,6 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
       className={`${arrowStyle} ${isLeft ? "left-2" : "right-2"}`}
       style={{ top: "45%" }}
     >
-      {/* <span role="img" aria-label={`Arrow ${isLeft ? "left" : "right"}`}>
-        {isLeft ? "◀" : "▶"}
-      </span> */}
       {isLeft ? (
         <span className="material-icons-outlined">chevron_left</span>
       ) : (
@@ -95,9 +92,8 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
     <div className="md:flex flex-col gap-5 items-center">
-      {/**h-[27rem] */}
       <div
-        className={`flex  w-full h-[25rem] md:rounded-xl md:overflow-hidden items-center`}
+        className={`flex  w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center`}
       >
         <div className="relative h-full w-full">
           <div className="carousel">
