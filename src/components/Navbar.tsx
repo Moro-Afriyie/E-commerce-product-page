@@ -46,9 +46,14 @@ const NavBar: React.FunctionComponent = () => {
             <div className="w-4 flex items-center justify-center absolute -top-[0.3rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
               <p>3</p>
             </div>
-            {/* <div className="border border-red-900 absolute z-20 w-80 h-80 left-10 right-0 bg-white"></div> */}
             <div className=" absolute -right-16 top-[3.5rem] px-2 sm:px-0 w-screen sm:w-80 xl:w-[22.5rem] sm:mr-4 md:mr-0  z-20 sm:top-10 sm:-right-[4.3rem] xl:-right-[6rem]">
-              <div className=" bg-white rounded-lg shadow-lg w-full h-full min-h-[20rem] sm:min-h-[13.5rem]"></div>
+              <div className=" bg-white rounded-lg shadow-2xl flex flex-col w-full h-full min-h-[20rem] sm:min-h-[13.5rem]">
+                <div>
+                  <p className="p-4 font-bold text-darkBlue">Cart</p>
+                  <hr className="" />
+                </div>
+                <div className="flex-grow  border border-gray-900"></div>
+              </div>
             </div>
           </div>
 
