@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import avatar from "../assets/image-avatar.png";
 import menuIcon from "../assets/icon-menu.svg";
 import deleteIcon from "../assets/icon-delete.svg";
+import CheckoutItem from "./CheckoutItem";
 
 const NavBar: React.FunctionComponent = () => {
   return (
@@ -59,21 +60,15 @@ const NavBar: React.FunctionComponent = () => {
                   </p> */}
 
                   <div className="flex flex-col gap-5 px-4 py-4 ">
-                    <div>
-                      <div className="h-[3.5rem] w-[3.5rem] overflow-hidden rounded-md">
-                        <img
-                          className="h-full w-full object-cover"
-                          src="https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"
-                        />
-                      </div>
-                      <div>
-                        <p>Fall Limited Edition Sneakers</p>
-                        <p>
-                          $125.00 x 3 <span>$375.00</span>
-                        </p>
-                      </div>
-                      <img src={deleteIcon} alt="deleteIcon" />
-                    </div>
+                    <CheckoutItem
+                      productName={"Fall Limited Edition Sneakers"}
+                      productPrice={125}
+                      productQuantity={3}
+                      productImageUrl={
+                        "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"
+                      }
+                      productId={"1234"}
+                    />
                     <button className="w-full px-4 py-3 text-sm text-white bg-darkOrange rounded-md">
                       Checkout
                     </button>
