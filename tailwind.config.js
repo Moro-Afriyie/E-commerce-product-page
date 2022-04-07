@@ -11,6 +11,7 @@ module.exports = {
         lightGrayishBlue: "hsl(223, 64%, 98%)",
         white: "hsl(0, 0%, 100%)",
         lightBoxBackground: "hsl(0, 0%, 0%)",
+        blackBackground: "rgba(0, 0, 0, 0.7)",
       },
       fontFamily: {
         KumbhSans: "'Kumbh Sans', sans-serif",

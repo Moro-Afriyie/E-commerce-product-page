@@ -53,7 +53,7 @@ const NavBar: React.FunctionComponent = () => {
                   <p className="p-4 font-bold text-darkBlue">Cart</p>
                   <hr className="" />
                 </div>
-                <div className="flex-grow">
+                <div className="flex-grow flex">
                   <div className="flex-grow flex justify-center items-center">
                     <p className="font-bold text-darkGrayishBlue">
                       Your cart is empty.
