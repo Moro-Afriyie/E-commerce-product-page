@@ -3,22 +3,28 @@ import logo from "../assets/logo.svg";
 import avatar from "../assets/image-avatar.png";
 import menuIcon from "../assets/icon-menu.svg";
 import CheckoutItem from "./CheckoutItem";
+import { useDispatch } from "react-redux";
+import { toggleSidebar } from "../store/actionCreators/sidebar.action";
 
 const NavBar: React.FunctionComponent = () => {
+  const dispatch = useDispatch();
   return (
     <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue">
       <nav className="h-full flex items-center justify-between">
         <div className="flex items-center md:items-start md:pt-6  md:gap-12 h-full">
-          <button className="mr-4 md:hidden">
+          <button
+            className="mr-4 md:hidden"
+            onClick={() => dispatch(toggleSidebar())}
+          >
             <img src={menuIcon} alt="menu icon" />
           </button>
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex md:gap-8 md:h-full">
-            <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground group">
+            <li className="flex flex-col cursor-pointer text-sm  text-darkGrayishBlue hover:text-lightBoxBackground group">
               <p>Collections</p>
-              <div className="hidden group-hover:block h-1 w-full  bg-darkOrange mt-auto"></div>
+              <div className="hidden group-hover:block h-1 w-full group-hover:bg-darkOrange mt-auto"></div>
             </li>
             <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground  group">
               <p>Men</p>
