@@ -47,6 +47,7 @@ const NavBar: React.FunctionComponent = () => {
               <p>3</p>
             </div>
             {/* <div className="border border-red-900 absolute z-20 w-80 h-80 left-10 right-0 bg-white"></div> */}
+            <div className="border border-red-900 absolute -right-16  w-screen sm:w-80 min-h-[13.5rem] xl:w-[22.5rem] sm:mr-4 md:mr-0 bg-white rounded-md shadow-lg z-20 top-10 sm:-right-[4.3rem] xl:-right-[6rem]"></div>
           </div>
 
           <div className="w-7 h-7 md:w-10 md:h-10 border-2 rounded-full hover:border-darkOrange cursor-pointer">
