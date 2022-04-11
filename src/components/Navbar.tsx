@@ -22,25 +22,20 @@ const NavBar: React.FunctionComponent = () => {
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex md:gap-8 md:h-full">
-            <li className="flex flex-col cursor-pointer text-sm  text-darkGrayishBlue hover:text-lightBoxBackground group">
+            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Collections</p>
-              <div className="hidden group-hover:block h-1 w-full group-hover:bg-darkOrange mt-auto"></div>
             </li>
-            <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground  group">
+            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Men</p>
-              <div className="hidden group-hover:block h-1 w-full bg-darkOrange mt-auto"></div>
             </li>
-            <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground group">
+            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Women</p>
-              <div className="hidden group-hover:block h-1 w-full bg-darkOrange mt-auto"></div>
             </li>
-            <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground group">
+            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>About</p>
-              <div className="hidden group-hover:block h-1 w-full bg-darkOrange mt-auto"></div>
             </li>
-            <li className="flex flex-col cursor-pointer text-sm text-darkGrayishBlue hover:text-lightBoxBackground group">
+            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Contact</p>
-              <div className="hidden group-hover:block h-1 w-full bg-darkOrange mt-auto"></div>
             </li>
           </ul>
         </div>
