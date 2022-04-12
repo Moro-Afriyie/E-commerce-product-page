@@ -6,7 +6,7 @@ import { addToCart } from "../store/actionCreators/cart.action";
 interface IProductDetailsProps {}
 
 const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
-  const [cartNumber, setCartNumber] = React.useState(0);
+  const [cartNumber, setCartNumber] = React.useState(1);
   const dispatch = useDispatch();
 
   return (
@@ -44,7 +44,7 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
             <span
               className="material-icons-outlined text-sm text-darkOrange cursor-pointer font-bold"
               onClick={() =>
-                setCartNumber((prev: number) => (prev <= 0 ? 0 : prev - 1))
+                setCartNumber((prev: number) => (prev <= 1 ? 1 : prev - 1))
               }
             >
               remove
