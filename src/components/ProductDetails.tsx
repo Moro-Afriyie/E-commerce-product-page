@@ -1,11 +1,9 @@
 import * as React from "react";
 import { useDispatch } from "react-redux";
+import { productImages } from "../models/ProductImages";
 import { addToCart } from "../store/actionCreators/cart.action";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IProductDetailsProps {}
-
-const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
+const ProductDetails: React.FunctionComponent = () => {
   const [cartNumber, setCartNumber] = React.useState(1);
   const dispatch = useDispatch();
 
@@ -66,8 +64,7 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
                 productName: "Fall Limited Edition Sneakers",
                 productPrice: 125,
                 quantity: cartNumber,
-                imageUrl:
-                  "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
+                imageUrl: productImages[0],
               })
             );
             setCartNumber(1);
