@@ -46,7 +46,7 @@ const NavBar: React.FunctionComponent = () => {
         </div>
         {/**cart icon and avatar */}
         <div className="flex gap-5 md:gap-8 items-center">
-          <div className="relative cursor-pointer">
+          <div className="relative cursor-pointer group">
             <span className="material-icons-outlined text-darkGrayishBlue hover:text-darkBlue">
               shopping_cart
             </span>
@@ -59,7 +59,7 @@ const NavBar: React.FunctionComponent = () => {
                 </p>
               </div>
             )}
-            <div className=" absolute -right-16 top-[3.5rem] px-2 sm:px-0 w-screen sm:w-80 xl:w-[22.5rem] sm:mr-4 md:mr-0  z-20 sm:top-10 sm:-right-[4.3rem] xl:-right-[6rem]">
+            <div className="hidden group-hover:block absolute -right-16 top-[3.5rem] px-2 sm:px-0 w-screen sm:w-80 xl:w-[22.5rem] sm:mr-4 md:mr-0  z-20 sm:top-10 sm:-right-[4.3rem] xl:-right-[6rem]">
               <div className=" bg-white rounded-lg shadow-2xl flex flex-col w-full h-full min-h-[13.5rem]">
                 <div>
                   <p className="p-4 font-bold text-darkBlue">Cart</p>
