@@ -1,5 +1,5 @@
 import { Product } from "../actionCreators/cart.action";
-import { ADD_TO_CART } from "../actionTypes/cart.type";
+import { ADD_TO_CART, DELETE_FROM_CART } from "../actionTypes/cart.type";
 
 interface InitState {
   cartItems: Product[];
@@ -8,10 +8,15 @@ const initialState: InitState = {
   cartItems: [],
 };
 
-type IAction = {
-  type: string;
-  payload: Product;
-};
+type IAction =
+  | {
+      type: typeof ADD_TO_CART;
+      payload: Product;
+    }
+  | {
+      type: typeof DELETE_FROM_CART;
+      payload: string;
+    };
 
 export const cartReducer = (state = initialState, action: IAction) => {
   switch (action.type) {
@@ -29,6 +34,15 @@ export const cartReducer = (state = initialState, action: IAction) => {
       return {
         ...state,
         cartItems: [...newArr],
+      };
+    }
+
+    case DELETE_FROM_CART: {
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          (item) => item.productId !== action.payload
+        ),
       };
     }
 
