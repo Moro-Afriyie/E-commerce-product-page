@@ -60,26 +60,28 @@ const NavBar: React.FunctionComponent = () => {
                   <hr className="" />
                 </div>
                 <div className="flex-grow flex">
-                  <div className="flex-grow flex justify-center items-center">
-                    <p className="font-bold text-darkGrayishBlue">
-                      Your cart is empty.
-                    </p>
-                  </div>
-
-                  {/* <div className="flex flex-col gap-5 px-4 py-4 ">
-                    <CheckoutItem
-                      productName={"Fall Limited Edition Sneakers"}
-                      productPrice={125}
-                      productQuantity={3}
-                      productImageUrl={
-                        "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"
-                      }
-                      productId={"1234"}
-                    />
-                    <button className="w-full px-4 py-3 text-sm text-white bg-darkOrange rounded-md">
-                      Checkout
-                    </button>
-                  </div> */}
+                  {cartItems.length > 0 ? (
+                    <div className="flex flex-col gap-5 px-4 py-4 ">
+                      <CheckoutItem
+                        productName={"Fall Limited Edition Sneakers"}
+                        productPrice={125}
+                        productQuantity={3}
+                        productImageUrl={
+                          "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"
+                        }
+                        productId={"1234"}
+                      />
+                      <button className="w-full px-4 py-3 text-sm text-white bg-darkOrange rounded-md">
+                        Checkout
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex-grow flex justify-center items-center">
+                      <p className="font-bold text-darkGrayishBlue">
+                        Your cart is empty.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

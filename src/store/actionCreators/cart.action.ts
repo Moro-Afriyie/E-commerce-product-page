@@ -1,7 +1,7 @@
 import { ADD_TO_CART } from "../actionTypes/cart.type";
 
 export interface Product {
-  productid: string;
+  productId: string;
   imageUrl: string;
   quantity: number;
   productName: string;

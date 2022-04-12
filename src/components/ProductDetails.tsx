@@ -1,10 +1,13 @@
 import * as React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/actionCreators/cart.action";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IProductDetailsProps {}
 
 const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
   const [cartNumber, setCartNumber] = React.useState(0);
+  const dispatch = useDispatch();
 
   return (
     <div className="product-details px-4 pt-6 md:px-0 max-w-[32rem] lg:pr-6 w-full  flex flex-col mx-auto md:mx-0 justify-center gap-4">
@@ -54,7 +57,21 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
             </span>
           </button>
         </div>
-        <button className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70">
+        <button
+          className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70"
+          onClick={() =>
+            dispatch(
+              addToCart({
+                productId: "1",
+                productName: "Fall Limited Edition Sneakers",
+                productPrice: 125,
+                quantity: cartNumber,
+                imageUrl:
+                  "https://images.unsplash.com/photo-1575365849095-b7e9b8f8f8f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+              })
+            )
+          }
+        >
           <span className="material-icons-outlined text-sm">shopping_cart</span>
           <p>Add to cart</p>
         </button>
