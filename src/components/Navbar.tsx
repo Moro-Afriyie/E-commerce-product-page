@@ -76,6 +76,7 @@ const NavBar: React.FunctionComponent = () => {
                             productPrice={item.productPrice}
                             productQuantity={item.quantity}
                             productImageUrl={item.imageUrl}
+                            id={item.productId}
                           />
                         );
                       })}

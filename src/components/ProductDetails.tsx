@@ -59,7 +59,7 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
         </div>
         <button
           className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70"
-          onClick={() =>
+          onClick={() => {
             dispatch(
               addToCart({
                 productId: "1",
@@ -69,8 +69,9 @@ const ProductDetails: React.FunctionComponent<IProductDetailsProps> = () => {
                 imageUrl:
                   "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
               })
-            )
-          }
+            );
+            setCartNumber(1);
+          }}
         >
           <span className="material-icons-outlined text-sm">shopping_cart</span>
           <p>Add to cart</p>

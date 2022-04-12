@@ -28,7 +28,7 @@ export const cartReducer = (state = initialState, action: IAction) => {
       if (index === -1) {
         newArr.push(action.payload);
       } else {
-        newArr[index] = action.payload;
+        newArr[index].quantity += action.payload.quantity;
       }
 
       return {
