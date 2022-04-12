@@ -3,11 +3,16 @@ import logo from "../assets/logo.svg";
 import avatar from "../assets/image-avatar.png";
 import menuIcon from "../assets/icon-menu.svg";
 import CheckoutItem from "./CheckoutItem";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../store/actionCreators/sidebar.action";
+import { IRootReducerState } from "../store/reducers/rootReducer";
 
 const NavBar: React.FunctionComponent = () => {
+  const cartItems = useSelector(
+    (state: IRootReducerState) => state.cart.cartItems
+  );
   const dispatch = useDispatch();
+
   return (
     <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue">
       <nav className="h-full flex items-center justify-between">

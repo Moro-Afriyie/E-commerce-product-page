@@ -1,6 +1,6 @@
 import { ADD_TO_CART } from "../actionTypes/cart.type";
 
-interface Product {
+export interface Product {
   productid: string;
   imageUrl: string;
   quantity: number;
