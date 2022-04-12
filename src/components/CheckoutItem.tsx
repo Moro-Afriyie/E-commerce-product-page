@@ -6,7 +6,6 @@ interface ICheckoutItemProps {
   productPrice: number;
   productQuantity: number;
   productImageUrl: string;
-  productId: string;
 }
 
 const CheckoutItem: React.FunctionComponent<ICheckoutItemProps> = (props) => {
