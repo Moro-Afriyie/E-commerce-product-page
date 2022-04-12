@@ -50,9 +50,15 @@ const NavBar: React.FunctionComponent = () => {
             <span className="material-icons-outlined text-darkGrayishBlue hover:text-darkBlue">
               shopping_cart
             </span>
-            <div className="w-4 flex items-center justify-center absolute -top-[0.3rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
-              <p>3</p>
-            </div>
+            {cartItems.length > 0 && (
+              <div className="w-4 flex items-center justify-center absolute -top-[0.3rem] left-2 rounded-lg bg-darkOrange text-white text-[0.5rem] text-center">
+                <p>
+                  {cartItems.reduce(function (acc, obj) {
+                    return acc + obj.quantity;
+                  }, 0)}
+                </p>
+              </div>
+            )}
             <div className=" absolute -right-16 top-[3.5rem] px-2 sm:px-0 w-screen sm:w-80 xl:w-[22.5rem] sm:mr-4 md:mr-0  z-20 sm:top-10 sm:-right-[4.3rem] xl:-right-[6rem]">
               <div className=" bg-white rounded-lg shadow-2xl flex flex-col w-full h-full min-h-[13.5rem]">
                 <div>
