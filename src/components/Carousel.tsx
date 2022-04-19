@@ -3,12 +3,9 @@ import { useDispatch } from "react-redux";
 import { productImages } from "../models/ProductImages";
 import { openModal } from "../store/actionCreators/modal.action";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface ICarouselProps {}
-
 const images = productImages;
 
-const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
+const Carousel: React.FunctionComponent = () => {
   const [currentImage, setCurrentImage] = React.useState(0);
   const dispatch = useDispatch();
 

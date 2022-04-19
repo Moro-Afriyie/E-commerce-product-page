@@ -2,7 +2,6 @@ import * as React from "react";
 import { useDispatch } from "react-redux";
 import { productImages } from "../models/ProductImages";
 import { closeModal } from "../store/actionCreators/modal.action";
-import Carousel from "./Carousel";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IModalProps {}
