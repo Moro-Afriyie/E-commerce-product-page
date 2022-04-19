@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useDispatch } from "react-redux";
 import { productImages } from "../models/ProductImages";
-import { openModal } from "../store/actionCreators/modal.action";
+import { closeModal, openModal } from "../store/actionCreators/modal.action";
 
 const images = productImages;
 
@@ -83,15 +83,17 @@ const Carousel: React.FunctionComponent = () => {
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
     <div className="md:flex flex-col gap-5 items-center">
-      <div
-        className="flex  w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer"
-        onClick={() => dispatch(openModal())}
-      >
+      <div className="flex  w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer">
         <div className="relative h-full w-full">
           <div className="carousel">
             {sliderControl(true)}
             {images.map((img, i) => (
-              <div className="w-full  flex-shrink-0" key={img} ref={refs[i]}>
+              <div
+                className="w-full  onClick={() => dispatch(openModal())} flex-shrink-0"
+                key={img}
+                ref={refs[i]}
+                onClick={() => dispatch(openModal())}
+              >
                 <img src={img} className="w-full h-full object-fill" />
               </div>
             ))}
