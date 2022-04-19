@@ -61,7 +61,7 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
 
   // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
   const arrowStyle =
-    "md:hidden absolute text-black text-2xl z-10 bg-white h-10 w-10 rounded-full  flex items-center justify-center";
+    "absolute text-black text-2xl z-50 bg-white h-10 w-10 rounded-full  flex items-center justify-center";
 
   // Let's create dynamic buttons. It can be either left or right. Using
   // isLeft boolean we can determine which side we'll be rendering our button
@@ -70,8 +70,8 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
     <button
       type="button"
       onClick={isLeft ? previousImage : nextImage}
-      className={`${arrowStyle} ${isLeft ? "left-2" : "right-2"}`}
-      style={{ top: "45%" }}
+      className={`${arrowStyle} ${isLeft ? "-left-5" : "-right-5"}`}
+      style={{ top: "35%" }}
     >
       {isLeft ? (
         <span className="material-icons-outlined">chevron_left</span>
@@ -88,16 +88,18 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
     >
       <div className="flex flex-col max-w-[30rem] items-center gap-4">
         <span
-          className="material-icons-outlined ml-auto text-white"
+          className="material-icons-outlined ml-auto text-darkOrange cursor-pointer"
           onClick={() => dispatch(closeModal())}
         >
           close
         </span>
-        <div className="md:flex flex-col gap-5 items-center max-w-[25rem]">
+
+        <div className="md:flex relative flex-col gap-5 items-center max-w-[25rem]">
+          {sliderControl(true)}
+          {sliderControl(false)}
           <div className="flex w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer">
             <div className="relative h-full w-full">
               <div className="carousel">
-                {sliderControl(true)}
                 {images.map((img, i) => (
                   <div
                     className="w-full  flex-shrink-0"
@@ -107,7 +109,6 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
                     <img src={img} className="w-full h-full object-fill" />
                   </div>
                 ))}
-                {sliderControl(false)}
               </div>
             </div>
           </div>
