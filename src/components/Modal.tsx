@@ -12,22 +12,14 @@ const images = productImages;
 const Modal: React.FunctionComponent<IModalProps> = () => {
   const [currentImage, setCurrentImage] = React.useState(0);
   const dispatch = useDispatch();
-
-  // We are using react ref to 'tag' each of the images. Below will create an array of
-  // objects with numbered keys. We will use those numbers (i) later to access a ref of a
-  // specific image in this array.
   const refs = images.reduce((acc: any, val, i) => {
     acc[i] = React.createRef();
     return acc;
   }, {});
 
   const scrollToImage = (i: number) => {
-    // First let's set the index of the image we want to see next
     setCurrentImage(i);
-    // Now, this is where the magic happens. We 'tagged' each one of the images with a ref,
-    // we can then use built-in scrollIntoView API to do eaxactly what it says on the box - scroll it into
-    // your current view! To do so we pass an index of the image, which is then use to identify our current
-    // image's ref in 'refs' array above.
+
     refs[i].current.scrollIntoView({
       //     Defines the transition animation.
       behavior: "smooth",
@@ -38,11 +30,8 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
     });
   };
 
-  // Some validation for checking the array length could be added if needed
   const totalImages = images.length;
 
-  // Below functions will assure that after last image we'll scroll back to the start,
-  // or another way round - first to last in previousImage method.
   const nextImage = () => {
     if (currentImage >= totalImages - 1) {
       scrollToImage(0);
@@ -59,13 +48,9 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
     }
   };
 
-  // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
   const arrowStyle =
     "absolute text-black text-2xl z-50 bg-white h-10 w-10 rounded-full  flex items-center justify-center";
 
-  // Let's create dynamic buttons. It can be either left or right. Using
-  // isLeft boolean we can determine which side we'll be rendering our button
-  // as well as change its position and content.
   const sliderControl = (isLeft: boolean) => (
     <button
       type="button"
@@ -88,7 +73,7 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
       className="fixed inset-0 bg-black bg-opacity-80 overflow-y-auto  z-50 flex items-center justify-center h-full w-full"
       id="my-modal"
     >
-      <div className="flex flex-col max-w-[30rem] items-center gap-4">
+      <div className="w-full flex flex-col sm:max-w-[30rem] items-center gap-4">
         <span
           className="material-icons-outlined ml-auto text-darkOrange cursor-pointer"
           onClick={() => dispatch(closeModal())}
@@ -96,10 +81,10 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
           close
         </span>
 
-        <div className="md:flex relative flex-col gap-5 items-center max-w-[25rem]">
+        <div className="max-w-[17rem] border-3 flex relative flex-col gap-5 items-center sm:max-w-[25rem]">
           {sliderControl(true)}
           {sliderControl(false)}
-          <div className="flex w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer">
+          <div className="flex w-full h-64 sm:h-[25rem] rounded-xl overflow-hidden items-center cursor-pointer">
             <div className="relative h-full w-full">
               <div className="carousel">
                 {images.map((img, i) => (
@@ -114,7 +99,7 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
               </div>
             </div>
           </div>
-          <div className="hidden controls max-w-[21rem] md:flex justify-center gap-6  h-16">
+          <div className="controls w-full sm:max-w-[21rem] flex justify-center gap-3 sm:gap-6 h-16">
             {images.map((img, i) => (
               <div
                 className={`w-full rounded-lg relative  cursor-pointer overflow-hidden hover:opacity-60 ${
