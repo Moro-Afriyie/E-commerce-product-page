@@ -105,18 +105,16 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
       <div className="hidden controls max-w-[25rem] md:flex justify-center gap-6  h-20">
         {images.map((img, i) => (
           <div
-            className={`w-full rounded-lg  cursor-pointer overflow-hidden hover:opacity-60 ${
+            className={`w-full relative rounded-lg  cursor-pointer overflow-hidden hover:opacity-60 ${
               i === currentImage ? "border-2 border-darkOrange " : ""
             }`}
             key={img}
             onClick={() => scrollToImage(i)}
           >
-            <img
-              src={img}
-              className={`w-full h-full object-cover ${
-                i === currentImage ? "opacity-60" : "opacity-100"
-              }`}
-            />
+            {i === currentImage && (
+              <div className="absolute top-0 left-0 right-0 bottom-0 z-30 bg-white opacity-70"></div>
+            )}
+            <img src={img} className="w-full h-full object-cover" />
           </div>
         ))}
       </div>
