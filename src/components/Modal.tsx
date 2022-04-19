@@ -70,7 +70,9 @@ const Modal: React.FunctionComponent<IModalProps> = () => {
     <button
       type="button"
       onClick={isLeft ? previousImage : nextImage}
-      className={`${arrowStyle} ${isLeft ? "-left-5" : "-right-5"}`}
+      className={`hover:text-darkOrange transition-colors ${arrowStyle} ${
+        isLeft ? "-left-5 " : "-right-5"
+      }`}
       style={{ top: "35%" }}
     >
       {isLeft ? (
