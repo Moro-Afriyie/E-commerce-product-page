@@ -1,19 +1,25 @@
-import { TOGGLE_MODAL } from "../actionTypes/modal";
+import { CLOSE_MODAL, OPEN_MODAL } from "../actionTypes/modal.type";
 
 const initialState = {
   isOpen: false,
 };
 
 type IAction = {
-  type: typeof TOGGLE_MODAL;
+  type: string;
 };
 
 export const modalReducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case TOGGLE_MODAL:
+    case CLOSE_MODAL:
       return {
         ...state,
-        isOpen: !state.isOpen,
+        isOpen: false,
+      };
+
+    case OPEN_MODAL:
+      return {
+        ...state,
+        isOpen: true,
       };
     default:
       return state;

@@ -1,4 +1,4 @@
-import { modalReducer } from "./modalReducer";
+import { modalReducer } from "./modal.reducer";
 import { combineReducers } from "redux";
 import { sidebarReducer } from "./sidebar.reducer";
 import { cartReducer } from "./cart.reducer";
