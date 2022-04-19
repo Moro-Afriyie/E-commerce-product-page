@@ -1,5 +1,7 @@
 import * as React from "react";
+import { useDispatch } from "react-redux";
 import { productImages } from "../models/ProductImages";
+import { openModal } from "../store/actionCreators/modal.action";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ICarouselProps {}
@@ -8,6 +10,7 @@ const images = productImages;
 
 const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
   const [currentImage, setCurrentImage] = React.useState(0);
+  const dispatch = useDispatch();
 
   // We are using react ref to 'tag' each of the images. Below will create an array of
   // objects with numbered keys. We will use those numbers (i) later to access a ref of a
@@ -83,7 +86,10 @@ const Carousel: React.FunctionComponent<ICarouselProps> = (props) => {
     // set with position relative, so we can place our cotrol buttons using
     // absolute positioning on each side of the image.
     <div className="md:flex flex-col gap-5 items-center">
-      <div className="flex  w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer">
+      <div
+        className="flex  w-full h-64 sm:h-[25rem] md:rounded-xl md:overflow-hidden items-center cursor-pointer"
+        onClick={() => dispatch(openModal())}
+      >
         <div className="relative h-full w-full">
           <div className="carousel">
             {sliderControl(true)}
