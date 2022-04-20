@@ -54,7 +54,7 @@ Users should be able to:
 
 ## Getting Started
 
-$ git clone https://github.com/Moro-Afriyie/Interactive-comments-section.git or you can download the zip file
+$ git clone https://github.com/Moro-Afriyie/E-commerce-product-page.git or you can download the zip file
 
     $ cd e-commerce-product-page
 
