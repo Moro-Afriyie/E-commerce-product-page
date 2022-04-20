@@ -56,6 +56,14 @@ Users should be able to:
 
 ## Getting Started
 
+$ git clone https://github.com/Moro-Afriyie/Interactive-comments-section.git or you can download the zip file
+
+    $ cd e-commerce-product-page
+
+    $ npm install
+
+    $ npm start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
