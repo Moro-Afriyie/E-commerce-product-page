@@ -14,3 +14,9 @@
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
+
+/* @media screen and (min-width: 1399px) {
+  html {
+    font-size: 20px;
+  }
+} */

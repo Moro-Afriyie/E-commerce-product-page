@@ -94,7 +94,11 @@ const Carousel: React.FunctionComponent = () => {
                 ref={refs[i]}
                 onClick={() => dispatch(openModal())}
               >
-                <img src={img} className="w-full h-full object-fill" />
+                <img
+                  src={img}
+                  className="w-full h-full object-fill"
+                  alt="sneaker"
+                />
               </div>
             ))}
             {sliderControl(false)}
@@ -113,7 +117,11 @@ const Carousel: React.FunctionComponent = () => {
             {i === currentImage && (
               <div className="absolute top-0 left-0 right-0 bottom-0 z-30 bg-white opacity-70"></div>
             )}
-            <img src={img} className="w-full h-full object-cover" />
+            <img
+              src={img}
+              className="w-full h-full object-cover"
+              alt="thumbnail"
+            />
           </div>
         ))}
       </div>
