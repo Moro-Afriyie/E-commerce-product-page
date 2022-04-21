@@ -21,10 +21,10 @@ const ProductDetails: React.FunctionComponent = () => {
         everything the weather can offer.
       </p>
       <div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center mt-4 mb-2">
           <p className="text-black font-bold text-2xl 3xl:text-3xl">$125.00</p>
-          <div className="px-2 py-[0.1rem] bg-paleOrange rounded-md">
-            <p className="text-[0.6rem] font-bold text-darkOrange font-KumbhSans">
+          <div className="px-2 py-[0.1rem] 3xl:py-[0.2rem] 3xl:px-3 bg-paleOrange rounded-md">
+            <p className="text-[0.6rem] 3xl:text-base font-bold text-darkOrange font-KumbhSans">
               50%
             </p>
           </div>
@@ -34,13 +34,13 @@ const ProductDetails: React.FunctionComponent = () => {
         </p>
       </div>
       <div
-        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 3xl:mt- lg:pr-10 mb-11
+        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 lg:pr-10 mb-11
             "
       >
-        <div className="flex justify-between items-center rounded-md py-3  px-2 w-full md:w-32 bg-lightGrayishBlue">
+        <div className="flex justify-between items-center rounded-md py-3 3xl:py-5 3xl:px-4 px-2 w-full md:w-32 bg-lightGrayishBlue">
           <button>
             <span
-              className="material-icons-outlined text-sm text-darkOrange cursor-pointer font-bold"
+              className="material-icons-outlined text-base text-darkOrange cursor-pointer font-bold"
               onClick={() =>
                 setCartNumber((prev: number) => (prev <= 1 ? 1 : prev - 1))
               }
@@ -50,13 +50,13 @@ const ProductDetails: React.FunctionComponent = () => {
           </button>
           <p className="text-darkBlue font-bold">{cartNumber}</p>
           <button onClick={() => setCartNumber((prev: number) => prev + 1)}>
-            <span className="material-icons-outlined cursor-pointer text-sm text-darkOrange font-bold">
+            <span className="material-icons-outlined cursor-pointer text-base text-darkOrange font-bold">
               add
             </span>
           </button>
         </div>
         <button
-          className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-sm font-bold text-white bg-darkOrange hover:opacity-70"
+          className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-base font-bold text-white bg-darkOrange hover:opacity-70"
           onClick={() => {
             dispatch(
               addToCart({
