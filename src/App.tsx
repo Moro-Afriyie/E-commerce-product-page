@@ -40,7 +40,7 @@ function App() {
       )}
       <div className="flex flex-col md:gap-5  md:max-w-6xl md:mx-auto h-full w-full">
         <NavBar />
-        <div className="md:px-8 lg:px-16 md:py-10  flex flex-col md:flex-row md:gap-8 md:justify-between">
+        <div className="md:px-8 lg:px-16 md:py-10 3xl:pl-[3rem] 3xl:pr-0  flex flex-col md:flex-row md:gap-8 md:justify-between">
           <div className="w-full md:max-w-[25rem] 3xl:max-w-[28rem]">
             <Carousel />
           </div>

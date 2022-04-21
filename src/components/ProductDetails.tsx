@@ -22,22 +22,22 @@ const ProductDetails: React.FunctionComponent = () => {
       </p>
       <div>
         <div className="flex gap-3 items-center">
-          <p className="text-black font-bold text-xl">$125.00</p>
+          <p className="text-black font-bold text-2xl 3xl:text-3xl">$125.00</p>
           <div className="px-2 py-[0.1rem] bg-paleOrange rounded-md">
             <p className="text-[0.6rem] font-bold text-darkOrange font-KumbhSans">
               50%
             </p>
           </div>
         </div>
-        <p className="text-sm text-grayishBlue font-bold line-through">
+        <p className="text-sm 3xl:text-base text-grayishBlue font-bold line-through">
           $250.00
         </p>
       </div>
       <div
-        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 lg:pr-10 mb-11
+        className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 3xl:mt- lg:pr-10 mb-11
             "
       >
-        <div className="flex justify-between items-center rounded-md py-3 px-2 w-full md:w-28 bg-lightGrayishBlue">
+        <div className="flex justify-between items-center rounded-md py-3  px-2 w-full md:w-32 bg-lightGrayishBlue">
           <button>
             <span
               className="material-icons-outlined text-sm text-darkOrange cursor-pointer font-bold"
@@ -70,7 +70,9 @@ const ProductDetails: React.FunctionComponent = () => {
             setCartNumber(1);
           }}
         >
-          <span className="material-icons-outlined text-sm">shopping_cart</span>
+          <span className="material-icons-outlined text-base">
+            shopping_cart
+          </span>
           <p>Add to cart</p>
         </button>
       </div>
