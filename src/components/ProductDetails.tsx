@@ -37,7 +37,7 @@ const ProductDetails: React.FunctionComponent = () => {
         className="control-buttons w-full flex flex-col md:flex-row gap-4 mt-4 lg:pr-10 mb-11
             "
       >
-        <div className="flex justify-between items-center rounded-md py-3 3xl:py-5 3xl:px-4 px-2 w-full md:w-32 bg-lightGrayishBlue">
+        <div className="flex justify-between items-center rounded-lg py-3 3xl:py-5 3xl:px-4 px-2 w-full md:w-32 bg-lightGrayishBlue">
           <button>
             <span
               className="material-icons-outlined text-base text-darkOrange cursor-pointer font-bold"
@@ -56,7 +56,7 @@ const ProductDetails: React.FunctionComponent = () => {
           </button>
         </div>
         <button
-          className="flex-grow rounded-md shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-base font-bold text-white bg-darkOrange hover:opacity-70"
+          className="flex-grow rounded-xl shadow-2xl flex gap-2 justify-center items-center shadow-paleOrange px-4 py-3 text-base font-bold text-white bg-darkOrange hover:opacity-70"
           onClick={() => {
             dispatch(
               addToCart({
