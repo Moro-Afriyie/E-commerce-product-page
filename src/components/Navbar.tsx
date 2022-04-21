@@ -14,9 +14,9 @@ const NavBar: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   return (
-    <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue">
+    <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue xl:h-32">
       <nav className="h-full flex items-center justify-between">
-        <div className="flex items-center md:items-start md:pt-6  md:gap-12 h-full">
+        <div className="flex items-center md:items-start md:pt-6  md:gap-12 xl:pt-[3.2rem] h-full">
           <button
             className="mr-4 md:hidden"
             onClick={() => dispatch(toggleSidebar())}
@@ -27,19 +27,19 @@ const NavBar: React.FunctionComponent = () => {
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex md:gap-8 md:h-full">
-            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
+            <li className="cursor-pointer text-sm xl:text-base transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Collections</p>
             </li>
-            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
+            <li className="cursor-pointer text-sm xl:text-base transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Men</p>
             </li>
-            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
+            <li className="cursor-pointer text-sm xl:text-base transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Women</p>
             </li>
-            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
+            <li className="cursor-pointer text-sm xl:text-base transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>About</p>
             </li>
-            <li className="cursor-pointer text-sm transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
+            <li className="cursor-pointer text-sm xl:text-base transition-all border-b-0 hover:border-b-4 ease-in-out hover:border-darkOrange  text-darkGrayishBlue hover:text-lightBoxBackground">
               <p>Contact</p>
             </li>
           </ul>
