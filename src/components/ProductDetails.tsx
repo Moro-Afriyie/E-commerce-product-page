@@ -12,9 +12,9 @@ const ProductDetails: React.FunctionComponent = () => {
       <h3 className="uppercase text-darkOrange font-bold tracking-widest">
         sneaker company
       </h3>
-      <p className="capitalize text-darkBlue font-bold text-4xl lg:text-5xl md:mb-4">
+      <h1 className="capitalize text-darkBlue font-bold text-4xl lg:text-5xl md:mb-4">
         Fall limited edition sneakers
-      </p>
+      </h1>
       <p className="text-darkGrayishBlue ">
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber against outer sole, they&apos;ll withstand
