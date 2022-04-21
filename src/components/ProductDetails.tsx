@@ -8,7 +8,7 @@ const ProductDetails: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="product-details px-4 pt-6 md:px-0 max-w-[32rem] lg:pr-6 w-full  flex flex-col mx-auto md:mx-0 justify-center gap-4">
+    <div className="product-details px-4 pt-6 3xl:pt-8 md:px-0 max-w-[32rem] lg:pr-6 w-full  flex flex-col mx-auto md:mx-0 justify-center gap-4">
       <h3 className="uppercase text-darkOrange font-bold tracking-widest">
         sneaker company
       </h3>
