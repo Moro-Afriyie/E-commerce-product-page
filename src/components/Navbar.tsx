@@ -14,7 +14,7 @@ const NavBar: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   return (
-    <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue 3xl:h-[7.5rem]">
+    <header className="px-4 h-16 md:h-20 md:border-b-2 md:border-lightGrayishBlue 3xl:h-[7.2rem]">
       <nav className="h-full flex items-center justify-between">
         <div className="flex items-center md:items-start md:pt-6  md:gap-12 3xl:pt-[3.2rem] h-full">
           <button
